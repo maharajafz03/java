@@ -1,9 +1,14 @@
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("welcome");
+    // Recursive function to calculate factorial
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
 
-        int number = 32;
-        String name = "hello_world";
-        System.out.println(name);
+    public static void main(String[] args) {
+        int num = 5;
+        System.out.println("Factorial of " + num + " is: " + factorial(num)); // Output: 120
     }
 }
